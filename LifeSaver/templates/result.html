@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumothorax Identifier</title>
+    <style>
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            text-align: center;
+        }
+        .text-25{
+            font-size: 25px;
+        }
+        .buttonify {
+            text-decoration: none;
+            background-color: orange;
+            font-size: 25px;
+            padding: 10px;
+            border-radius: 5%;
+            width: 10%;
+        }
+        .buttonify:visited{
+            text-decoration: none;
+            color: black;
+        }
+        .buttonify:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <img src = "{{fileName}}" alt="{{message}}", class="center">
+    <div class="center text-25">{{message}}</div>
+    <a href="http://127.0.0.1:8000/form", class="center buttonify">Back</a>
+</body>
+</html>

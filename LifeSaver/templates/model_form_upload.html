@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumothorax Identifier</title>
+    <style>
+        form {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;      
+            font-size: 25px;
+            padding: 10px;
+        }
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;      
+            font-size: 25px;
+            padding: 10px;  
+        }
+        input {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+        }
+        body {
+            background-color: black;
+            background-image: url('https://cdn-prod.medicalnewstoday.com/content/images/articles/318/318110/illustration-of-a-collapsed-lung.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position-x: center;
+            background-position-y: 145px;
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+
+    <form method='POST' enctype="multipart/form-data">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button type="submit" value="submit">Submit</button>
+    </form>
+
+</body>
+</html>
